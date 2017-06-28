@@ -6,4 +6,10 @@ class ExercisesController < ApplicationController
 
     redirect_to @workout
   end
+
+  def destroy
+    exercise = Exercise.find(params[:id])
+    exercise.destroy
+    redirect_to :back
+  end
 end
